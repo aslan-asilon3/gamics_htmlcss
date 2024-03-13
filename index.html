@@ -31,7 +31,244 @@
   -->
 </head>
 
-<body id="top">
+
+
+<style>
+  @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+  .card {
+    position: absolute;
+    width: 80%;
+    padding-right:100px;
+    padding-bottom:200px;
+    height: 100%;
+    left: 0;
+    right: 10;
+    transition: transform .4s ease;
+    cursor: pointer;
+  }
+
+  .card img{  
+    width: 450px;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+    transform: translatex(-40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+  }
+
+  #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+    transform: translatex(40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+  }
+
+  #item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+    
+    img {
+      box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+    }
+  }
+
+  .player {
+    background-color: #fff;
+    border-radius: 8px;
+    min-width: 320px;
+    padding: 16px 10px;
+  }
+
+  .upper-part {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    height: 36px;
+    overflow: hidden;
+  }
+
+  .play-icon{ margin-right: 10px; }
+
+  .song-info {
+    width: calc(100% - 32px);
+    display: block;
+  }
+
+  .song-info .title {
+    color: #403d40;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .sub-line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .subtitle, .time {
+    font-size: 12px;
+    line-height: 16px;
+    color: #c6c5c6;
+  }
+
+  .time {
+    font-size: 12px;
+    line-height: 16px;
+    color: #a5a5a5;
+    font-weight: 500;
+    margin-left: auto;
+  }
+
+  .progress-bar {
+    height: 3px;
+    width: 100%;
+    background-color: #e9efff;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .progress {
+    display: block;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background-color: #2992dc;
+    border-radius: 6px;
+  }
+
+  .info-area {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    transition: transform .4s ease-in;
+  }
+
+
+
+  #item-1:checked ~ .player #test {
+    transform: translateY(0);
+  }
+
+  #item-2:checked ~ .player #test  {
+    transform: translateY(-40px);
+  }
+
+  #item-3:checked ~ .player #test  {
+    transform: translateY(-80px);
+  }
+
+  input[type="radio"] {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+</style>
+
+
+<style>
+  .card-new {
+    width: 200px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 2px;
+    perspective: 2500px;
+    margin: 0 5px;
+  }
+
+  .cover-image-new {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wrapper-new {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .card-new:hover .wrapper-new {
+    transform: perspective(900px) translateY(-5%) rotateX(40deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  }
+
+  .wrapper-new::before,
+  .wrapper-new::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+  }
+  .wrapper-new::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+      to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+  .wrapper-new::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+
+  .card-new:hover .wrapper-new::before,
+  .wrapper-new::after {
+    opacity: 1;
+  }
+
+  .card-new:hover .wrapper-new::after {
+    height: 50px;
+  }
+  .title-new {
+    width: 100%;
+    transition: transform 0.5s;
+  }
+  .card-new:hover .title-new {
+    transform: translate3d(0%, -50px, 100px);
+  }
+
+  .character-new {
+    width: 60%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .card-new:hover .character-new {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+  }
+
+</style>
+
+<body class="" id="top">
 
   <!-- 
     - #HEADER
@@ -42,13 +279,13 @@
     <div class="header-top">
       <div class="container">
 
-        <div class="countdown-text">
-          Exclusive Black Friday ! Offer <span class="span skewBg">10</span> Days
+        <div class="countdown-text font-shadow">
+          Exclusive Black Friday ! Offer <span class="span text-white font-shadow skewBg">10</span> Days
         </div>
 
         <div class="social-wrapper">
 
-          <p class="social-title">Follow us on :</p>
+          <p class="social-title font-shadow">Follow us on :</p>
 
           <ul class="social-list">
 
@@ -86,10 +323,10 @@
     <div class="header-bottom skewBg" data-header>
       <div class="container">
 
-        <a href="#" class="logo">Gamics</a>
+        <a href="#" class="logo font-shadow">Gamics</a>
 
         <nav class="navbar" data-navbar>
-          <ul class="navbar-list">
+          <ul class="navbar-list font-shadow">
 
             <li class="navbar-item">
               <a href="#home" class="navbar-link skewBg" data-nav-link>Home</a>
@@ -181,24 +418,53 @@
 
           <div class="hero-content">
 
-            <p class="hero-subtitle">World Gaming</p>
+            <p class="hero-subtitle font-shadow">World Gaming</p>
 
-            <h1 class="h1 hero-title">
-              Create <span class="span">Manage</span> Matches
+            <h1 class="h1 hero-title font-shadow">
+              Create  <span class="span">Manage</span> Matches
             </h1>
 
-            <p class="hero-text">
+            <p class="hero-text font-shadow">
               Find technology or people for digital projects in public sector and Find an individual specialist develope
               researcher.
             </p>
 
-            <button class="btn skewBg">Read More</button>
+            <button class="btn skewBg font-shadow">Read More</button>
 
           </div>
 
-          <figure class="hero-banner img-holder" style="--width: 700; --height: 700;">
-            <img src="./assets/images/hero-banner.png" width="700" height="700" alt="hero banner" class="w-100">
+          <figure class="hero-banner img-holder" style="--width: 700; --height: 700;z-index:99;position: relative;" >
+            <div class="">
+                  <input type="radio" name="slider" id="item-1"  checked>
+                  <input type="radio" name="slider" id="item-2" >
+                  <input type="radio" name="slider" id="item-3" >
+              <div class="cards">
+                <label class="card" for="item-1" id="song-1">
+                  <img src="./assets/images/actor-game4-700x700.png" alt="song">
+                </label>
+                <label class="card" for="item-2" id="song-2">
+                  <img src="./assets/images/actor-game5-700x700.png" alt="song">
+                </label>
+                <label class="card" for="item-3" id="song-3">
+                  <img src="./assets/images/actor-game2-700x700.png" alt="song">
+                </label>
+              </div>
+            </div>
           </figure>
+
+
+
+          <!---
+
+          <figure class="hero-banner img-holder" style="--width: 700; --height: 700;z-index:99;position: relative;">
+            <img  src="./assets/images/hero-banner.png" width="700" height="700" alt="hero banner" class="w-100">
+          </figure>
+
+          <figure class="hero-banner img-holder" style="--width: 700; --height: 700;z-index:100;position: relative;">
+            <img src="./assets/images/actor-game1.png" width="700" height="700" alt="hero banner" class="w-100">
+          </figure>
+          
+          --->
 
         </div>
       </section>
@@ -260,18 +526,48 @@
 
             <p class="section-subtitle">Latest Releases</p>
 
-            <h2 class="h2 section-title">
+            <h2 class="h2 section-title font-shadow font-shadow">
               Create & <span class="span">Manage</span>
             </h2>
 
+
+            
+
+            
+
+
+
             <ul class="has-scrollbar">
+
+                  <!--
+                  <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
+                    <div class="card-new">
+                      <div class="wrapper-new">
+                        <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg" class="cover-image-new" />
+                      </div>
+                      <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title-new" />
+                      <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" class="character-new" />
+                    </div>
+                  </a>
+                  -->
+
+
+
+
+      
 
               <li class="scrollbar-item">
                 <div class="latest-game-card">
 
-                  <figure class="card-banner img-holder" style="--width: 400; --height: 470;">
-                    <img src="./assets/images/latest-game-1.jpg" width="400" height="470" loading="lazy"
-                      alt="White Walker Daily" class="img-cover">
+                  <figure >
+                    <a href="" alt="Mythrill" target="_blank">
+                      <div class="card-new" style="text:align:center;">
+                        <div class="wrapper-new">
+                          <img style="width:270px;height:370px;margin-left:1px;"  loading="lazy" src="./assets/images/latest-game-1.jpg" class="cover-image-new" />
+                        </div>
+                        <img style="width:280px;height:370px;margin-left:70px;" loading="lazy" src="./assets/images/latest-game-1-remove-bg.png" class="title-new" />
+                      </div>
+                    </a>
                   </figure>
 
                   <div class="card-content">
@@ -279,7 +575,7 @@
                     <a href="#" class="card-badge skewBg">Zombie</a>
 
                     <h3 class="h3">
-                      <a href="#" class="card-title">White Walker <span class="span">Daily</span></a>
+                      <a href="#" class="card-title font-shadow" >White Walker <span class="span">Daily</span></a>
                     </h3>
 
                     <p class="card-price">
@@ -304,7 +600,7 @@
                     <a href="#" class="card-badge skewBg">Adventure</a>
 
                     <h3 class="h3">
-                      <a href="#" class="card-title">Hunter Killer <span class="span">II</span></a>
+                      <a href="#" class="card-title font-shadow">Hunter Killer <span class="span">II</span></a>
                     </h3>
 
                     <p class="card-price">
@@ -329,7 +625,7 @@
                     <a href="#" class="card-badge skewBg">Action</a>
 
                     <h3 class="h3">
-                      <a href="#" class="card-title">Cyberpunk <span class="span">Daily</span></a>
+                      <a href="#" class="card-title font-shadow">Cyberpunk <span class="span">Daily</span></a>
                     </h3>
 
                     <p class="card-price">
@@ -357,7 +653,7 @@
         <section class="section live-match" id="live" aria-label="live match">
           <div class="container">
 
-            <h2 class="h2 section-title">
+            <h2 class="h2 section-title font-shadow">
               Watch Live <span class="span">Match</span>
             </h2>
 
@@ -410,7 +706,7 @@
       <section class="section featured-game" id="features" aria-label="featured game">
         <div class="container">
 
-          <h2 class="h2 section-title">
+          <h2 class="h2 section-title font-shadow">
             All Released <span class="span">Games</span>
           </h2>
 
@@ -427,7 +723,7 @@
                 <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title" tabindex="-1">
+                    <a href="#" class="card-title font-shadow" tabindex="-1">
                       Just for <span class="span">Gamers</span>
                     </a>
                   </h3>
@@ -446,7 +742,7 @@
                     class="card-icon">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">
+                    <a href="#" class="card-title font-shadow">
                       Just for <span class="span">Gamers</span>
                     </a>
                   </h3>
@@ -473,7 +769,7 @@
                 <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title" tabindex="-1">
+                    <a href="#" class="card-title font-shadow" tabindex="-1">
                       Need for <span class="span">Speed</span>
                     </a>
                   </h3>
@@ -492,7 +788,7 @@
                     class="card-icon">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">
+                    <a href="#" class="card-title font-shadow">
                       Need for <span class="span">Speed</span>
                     </a>
                   </h3>
@@ -519,7 +815,7 @@
                 <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title" tabindex="-1">
+                    <a href="#" class="card-title font-shadow" tabindex="-1">
                       Egypt Hunting <span class="span">Gamers</span>
                     </a>
                   </h3>
@@ -538,7 +834,7 @@
                     class="card-icon">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">
+                    <a href="#" class="card-title font-shadow">
                       Egypt Hunting <span class="span">Gamers</span>
                     </a>
                   </h3>
@@ -565,7 +861,7 @@
                 <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title" tabindex="-1">
+                    <a href="#" class="card-title font-shadow" tabindex="-1">
                       Just for <span class="span">Gamers</span>
                     </a>
                   </h3>
@@ -584,7 +880,7 @@
                     class="card-icon">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">
+                    <a href="#" class="card-title font-shadow">
                       Just for <span class="span">Gamers</span>
                     </a>
                   </h3>
@@ -617,7 +913,7 @@
         style="background-image: url('./assets/images/shop-bg.jpg')">
         <div class="container">
 
-          <h2 class="h2 section-title">
+          <h2 class="h2 section-title font-shadow">
             Gaming Product <span class="span">Corner</span>
           </h2>
 
@@ -641,7 +937,7 @@
                   <a href="#" class="card-badge skewBg">t-shirt</a>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Women Black T-Shirt</a>
+                    <a href="#" class="card-title font-shadow">Women Black T-Shirt</a>
                   </h3>
 
                   <div class="card-wrapper">
@@ -670,7 +966,7 @@
                   <a href="#" class="card-badge skewBg">x-box</a>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Gears 5 Xbox Controller</a>
+                    <a href="#" class="card-title font-shadow">Gears 5 Xbox Controller</a>
                   </h3>
 
                   <div class="card-wrapper">
@@ -699,7 +995,7 @@
                   <a href="#" class="card-badge skewBg">Graphics</a>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">GeForce RTX 2070</a>
+                    <a href="#" class="card-title font-shadow">GeForce RTX 2070</a>
                   </h3>
 
                   <div class="card-wrapper">
@@ -728,7 +1024,7 @@
                   <a href="#" class="card-badge skewBg">VR-Box</a>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Virtual Reality Smiled</a>
+                    <a href="#" class="card-title font-shadow">Virtual Reality Smiled</a>
                   </h3>
 
                   <div class="card-wrapper">
@@ -760,7 +1056,7 @@
       <section class="section blog" id="blog" aria-label="blog">
         <div class="container">
 
-          <h2 class="h2 section-title">
+          <h2 class="h2 section-title font-shadow">
             Latest News & <span class="span">Articles</span>
           </h2>
 
@@ -798,7 +1094,7 @@
                   </ul>
 
                   <h3>
-                    <a href="#" class="card-title">Shooter Action Video</a>
+                    <a href="#" class="card-title font-shadow">Shooter Action Video</a>
                   </h3>
 
                   <p class="card-text">
@@ -843,7 +1139,7 @@
                   </ul>
 
                   <h3>
-                    <a href="#" class="card-title">The Walking Dead</a>
+                    <a href="#" class="card-title font-shadow">The Walking Dead</a>
                   </h3>
 
                   <p class="card-text">
@@ -888,7 +1184,7 @@
                   </ul>
 
                   <h3>
-                    <a href="#" class="card-title">Defense Of The Ancients</a>
+                    <a href="#" class="card-title font-shadow">Defense Of The Ancients</a>
                   </h3>
 
                   <p class="card-text">
@@ -924,7 +1220,7 @@
 
           <div class="newsletter-card">
 
-            <h2 class="h2">
+            <h2 class="h2 font-shadow">
               Our <span class="span">Newsletter</span>
             </h2>
 
@@ -968,7 +1264,7 @@
 
         <div class="footer-brand">
 
-          <a href="#" class="logo">Gamics</a>
+          <a href="#" class="logo font-shadow">Gamics</a>
 
           <p class="footer-text">
             Gamics marketplace the relase etras thats sheets continig passag.
@@ -1159,6 +1455,18 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script>
+    $('input').on('change', function() {
+      $('body').toggleClass('blue');
+    });
+
+  </script>
+
+
+  <script>
+  </script>
 
 </body>
 

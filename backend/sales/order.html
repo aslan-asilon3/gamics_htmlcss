@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Page</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <!-- DataTables -->
+  <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Dashboard ERP</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Sulaslan Setiawan</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="../dashboard-erp.html" class="nav-link">
+              <i class="nav-icon fa fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Catalog
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="products-erp.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Categories</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Manufacturers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Reviews</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Tags</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    Attributes
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Product Attributes</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Spesification Attributes</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Checkout Attributes</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Sales
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Orders</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Shipments</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Return Requests</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Recurring Payments</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Gift Cards</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Shopping Carts and Wishlist</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Customers
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customer Roles</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Online Customers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Vendors</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Activity Log</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Activity Type</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>GDPR Requests (log) </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Promotions
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Discounts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Affiliates</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Newsletter Subscribers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Campaigns</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Activity Log</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Activity Type</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>GDPR Requests (log) </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Content Management
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Topics (Pages)</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Message Templates</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>News Items</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>News Comments</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Blog Posts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Blog Comments</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Polls </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Forums </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Configuration
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    Settings
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>General Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Customer Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Order Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Shipping Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Tax Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Catalog Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Shopping Cart Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Reward Points</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>GDPR Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Vendor Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Blog Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>News Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Forum Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Media Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>All Settings (Advances)</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Email Accounts</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Stores</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Countries</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Languages</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Currencies</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Payment Methods</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Payment Restrictions</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Tax Providers</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Tax Categories</p>
+                    </a>
+                  </li>
+                  
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>
+                        Shipping
+                        <i class="fas fa-angle-left right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Shipping Providers</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Warehouses</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Pickup Points</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Dates and Ranges</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Measures</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>
+                        POS
+                        <i class="fas fa-angle-left right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>PayPal Zettle</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Accesss control list</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Widgets</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>
+                            Authentication
+                            <i class="fas fa-angle-left right"></i>
+                          </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                            <a href="pages/examples/login.html" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>External Authentication</p>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="pages/examples/login.html" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Multi-factor Authentication</p>
+                            </a>
+                          </li>
+                          
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Web API</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Local Plugins</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>All Plugins and Themes</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Categories</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Manufacturers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Reviews</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Tags</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                System
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>System Informastion</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Log</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Warnings</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Maintenance</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Message Queue</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Schedule Tasks</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Search Engine Friendly Pages Names</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Templates</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Reports
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Sales Summary</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Low Stock</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Bestsellers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product never purchased</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Country Sales</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    Customer Reports
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Registered Customer</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Customerby order total</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Customer by number of order</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Help
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Training</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Documentation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Community Forums</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Premium Support Services</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="404_page.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Solution Partners</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="../dashboard-erp.html" class="nav-link">
+              <i class="nav-icon fa fa-sign-out-alt"></i>
+              <p>
+                Sign out
+              </p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-sm-12" style="display:flex;">
+                    <div class="col-sm-4">
+                        <h1>Orders</h1>
+                    </div>
+                    
+
+                    <div class="col-sm-8">
+                        <div class="float-right">
+                            <a class="btn btn-primary" href="/Admin/Product/Create">
+                                <i class="fas fa-plus-square"></i>
+                                Add new
+                            </a>
+
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-flat">Export</button>
+                                <button type="button" class="btn btn-default btn-flat dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                                <span class="sr-only">Export</span>
+                                </button>
+                                <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" href="#">Export to XML (all found)</a>
+                                <a class="dropdown-item" href="#">Export to XML (selected)</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Export to Excel (all found)</a>
+                                <a class="dropdown-item" href="#">Export to Excel (selected)</a>
+                            </div>
+
+
+                            <div class="btn-group pr-2" >
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-info">
+                                        <i class="far fa-file-pdf"></i>
+                                        Print PDF invoices
+                                    </button>
+                                    <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown" aria-expanded="false">
+                                        <span class="sr-only">&nbsp;</span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li class="dropdown-item">
+                                            <button type="submit" name="pdf-invoice-all" formaction="/Admin/Order/PdfInvoice" class="btn btn-link">
+                                                Print PDF invoices (all found)
+                                            </button>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <button type="button" id="pdf-invoice-selected" class="btn btn-link">
+                                                Print PDF invoices (selected)
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="btn-group">
+                                <button type="button" name="importexcel" class="btn bg-olive" data-toggle="modal" data-target="#importexcel-window">
+                                    <i class="fas fa-upload"></i>
+                                    Import
+                                </button>
+                            </div>
+
+
+                            <!-- Button to trigger PDF Invoice Selected modal -->
+                            <button type="button" class="btn btn-default" id="pdfInvoiceSelected" style="display:none" data-toggle="modal" data-target="#pdfInvoiceSelected-action-alert"></button>
+
+                            <!-- Modal for Import from Excel -->
+                            <div class="modal fade" id="importexcel-window" tabindex="-1" role="dialog" aria-labelledby="importexcel-window-title">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="importexcel-window-title">Import from Excel</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <form method="post" enctype="multipart/form-data" action="/Admin/Order/ImportFromXlsx">
+                                            <div class="form-horizontal">
+                                                <div class="modal-body">
+                                                    <ul class="common-list">
+                                                        <li><em>Imported orders are distinguished by order GUID. If the order GUID already exists, then its details will be updated.</em></li>
+                                                        <li><em>Import requires a lot of memory resources. That's why it's not recommended to import more than 500 - 1,000 records at once. If you have more records, it's better to split them into multiple Excel files and import separately.</em></li>
+                                                    </ul>
+                                                    <div class="form-group row">
+                                                        <div class="col-md-2">
+                                                            <div class="label-wrapper">
+                                                                <label class="col-form-label">Excel file</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <input type="file" id="importexcelfile" name="importexcelfile" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary">Import from Excel</button>
+                                                </div>
+                                            </div>
+                                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8IiSoo1ocrtFvurdsk63e1QsAq6_-yRmBEIm6ndwGKLQqrD9ATz2MRTFAu1hzANhHWFUqCnLHv1j9RstY6VedLnnvrN2Fx5xB1qPoxab5UEbymTxf55QwIejAvGox3Kz0BN4aVn29o3aVuY01anl9htZcq3B9QjHOu9mSSTJhp-vzf4Q-V7Fe98ED1KGNtSYQA" />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <button type="button" id="delete-selected" class="btn btn-danger">
+                                <i class="far fa-trash-alt"></i>
+                                Delete (selected)
+                            </button>
+
+                            <div id="delete-selected-action-confirmation" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="delete-selected-action-confirmation-title">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="delete-selected-action-confirmation-title">Are you sure?</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure you want to perform this action?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" id="delete-selected-action-confirmation-submit-button" class="btn btn-primary float-right">
+                                                Yes
+                                            </button>
+                                            <span class="btn btn-default float-right margin-r-5" data-dismiss="modal">No, cancel</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Product Search -->
+      <div class="card card-default color-palette-box" style="=">
+          
+        <div class="card-header" >
+            <h3 class="card-title">
+                <i class="fas fa-search"></i>
+                Search
+            </h3>
+            <div type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                <h3 class="card-title">
+                    <i style="margin-right: 10px;" class="fa toggle-icon fa-minus"></i>
+                </h3>
+            </div>
+        </div>
+
+
+
+        <div class="card-body">
+          <div class="row">
+              <div class="col-sm-6">
+                  <!-- text input -->
+                  <div class="form-group">
+                      <div title="the start date for the search ( when a product was added to the cart)" data-toggle="tooltip" class="ico-help"> <label>Start date</label> <i class="fas fa-question-circle"></i></div>
+                      <input type="text" class="form-control" placeholder="Enter ...">
+                  </div>
+
+                  <div class="form-group">
+                      <div title="the end date for the search ( when a product was added to the cart)" data-toggle="tooltip" class="ico-help"> <label>End date</label> <i class="fas fa-question-circle"></i></div>
+                      <input type="text" class="form-control" placeholder="Enter ...">
+                  </div>
+
+                  <div class="form-group ">
+                      <div title="Load orders with products from a specified warehouse" data-toggle="tooltip" class="ico-help"> <label>Warehoses</label> <i class="fas fa-question-circle"></i></div>
+                      <div class="col-md-0">
+                          <select class="form-control" data-val="true" data-val-required="The Category field is required." id="SearchCategoryId" name="SearchCategoryId"><option selected="selected" value="0">All</option>
+                          <option value="1">Warehouse 1 (Jakarta)</option>
+                          <option value="2">Warehouse 2 (Seoul)</option>
+                          <option value="3">Warehouse 3 (Tokyo)</option>
+                          </select>
+                      </div>
+                  </div>
+                  
+                  <div class="form-group">
+                      <div title="Search by spesific a product" data-toggle="tooltip" class="ico-help"> <label>Product</label> <i class="fas fa-question-circle"></i></div>
+                      <input type="text" class="form-control" placeholder="Enter ...">
+                  </div>
+
+                    <div class="form-group">
+                        <div title="Filter by a specific order status e.d Complete" data-toggle="tooltip" class="ico-help">
+                            <label>Order Statuses</label>
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="col-md-0">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SearchOrderStatusId" id="allStatus" value="0" checked>
+                                <label class="form-check-label" for="allStatus">All</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SearchOrderStatusId" id="pendingStatus" value="1">
+                                <label class="form-check-label" for="pendingStatus">Pending</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SearchOrderStatusId" id="processingStatus" value="2">
+                                <label class="form-check-label" for="processingStatus">Processing</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SearchOrderStatusId" id="shippedStatus" value="3">
+                                <label class="form-check-label" for="shippedStatus">Complete</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SearchOrderStatusId" id="shippedStatus" value="3">
+                                <label class="form-check-label" for="shippedStatus">Cancelled</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div title="Filter by a specific payment status e.d Paid" data-toggle="tooltip" class="ico-help">
+                            <label>Order Statuses</label>
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="col-md-0">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SearchOrderStatusId" id="allStatus" value="0" checked>
+                                <label class="form-check-label" for="allStatus">All</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SearchOrderStatusId" id="pendingStatus" value="1">
+                                <label class="form-check-label" for="pendingStatus">Pending</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SearchOrderStatusId" id="processingStatus" value="2">
+                                <label class="form-check-label" for="processingStatus">Authorized</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SearchOrderStatusId" id="shippedStatus" value="3">
+                                <label class="form-check-label" for="shippedStatus">Paid</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SearchOrderStatusId" id="shippedStatus" value="3">
+                                <label class="form-check-label" for="shippedStatus">Partialy refunded</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SearchOrderStatusId" id="shippedStatus" value="3">
+                                <label class="form-check-label" for="shippedStatus">Refunded</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="SearchOrderStatusId" id="shippedStatus" value="3">
+                                <label class="form-check-label" for="shippedStatus">Voided</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+              </div>
+              <div class="col-sm-6">
+                  <div class="form-group ">
+                      <div title="Search by a specific vendor." data-toggle="tooltip" class="ico-help"> <label>Vendor</label> <i class="fas fa-question-circle"></i></div>
+                      <div class="col-md-0">
+                      <select class="form-control" data-val="true" data-val-required="The Vendor field is required." id="SearchVendorId" name="SearchVendorId"><option selected="selected" value="0">All</option>
+                          <option value="1">Vendor 1</option>
+                          <option value="2">Vendor 2</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <div title="Filter by customer billing phone number" data-toggle="tooltip" class="ico-help"> <label>Billing phone number</label> <i class="fas fa-question-circle"></i></div>
+                      <input type="text" class="form-control" placeholder="Enter ...">
+                  </div>
+
+                  <div class="form-group">
+                      <div title="Filter by customer billing email addresses" data-toggle="tooltip" class="ico-help"> <label>Billing email address</label> <i class="fas fa-question-circle"></i></div>
+                      <input type="text" class="form-control" placeholder="Enter ...">
+                  </div>
+
+                  <div class="form-group">
+                      <div title="Filter by customer billing lastname" data-toggle="tooltip" class="ico-help"> <label>Billing last name</label> <i class="fas fa-question-circle"></i></div>
+                      <input type="text" class="form-control" placeholder="Enter ...">
+                  </div>
+
+                  <div class="form-group">
+                      <div title="Filter by billing countries" data-toggle="tooltip" class="ico-help"> <label>Billing Countries</label> <i class="fas fa-question-circle"></i></div>
+                      <div class="col-md-8">
+                      <select class="form-control" data-val="true" data-val-required="The Product type field is required." id="SearchProductTypeId" name="SearchProductTypeId"><option selected="selected" value="0">All</option>
+                        <option value="1">United States</option>
+                        <option value="88">Afghanistan</option>
+                        <option value="89">Albania</option>
+                        <option value="90">Algeria</option>
+                        <option value="91">American Samoa</option>
+                        <option value="92">Andorra</option>
+                        <option value="93">Angola</option>
+                        <option value="94">Anguilla</option>
+                        <option value="95">Antarctica</option>
+                        <option value="96">Antigua and Barbuda</option>
+                        <option value="3">Argentina</option>
+                        <option value="4">Armenia</option>
+                        <option value="5">Aruba</option>
+                        <option value="6">Australia</option>
+                        <option value="7">Austria</option>
+                        <option value="8">Azerbaijan</option>
+                        <option value="9">Bahamas</option>
+                        <option value="97">Bahrain</option>
+                        <option value="10">Bangladesh</option>
+                        <option value="98">Barbados</option>
+                        <option value="11">Belarus</option>
+                        <option value="12">Belgium</option>
+                        <option value="13">Belize</option>
+                        <option value="99">Benin</option>
+                        <option value="14">Bermuda</option>
+                        <option value="100">Bhutan</option>
+                        <option value="15">Bolivia</option>
+                        <option value="16">Bosnia and Herzegowina</option>
+                        <option value="101">Botswana</option>
+                        <option value="102">Bouvet Island</option>
+                        <option value="17">Brazil</option>
+                        <option value="103">British Indian Ocean Territory</option>
+                        <option value="104">Brunei Darussalam</option>
+                        <option value="18">Bulgaria</option>
+                        <option value="105">Burkina Faso</option>
+                        <option value="106">Burundi</option>
+                        <option value="107">Cambodia</option>
+                        <option value="108">Cameroon</option>
+                        <option value="2">Canada</option>
+                        <option value="109">Cape Verde</option>
+                        <option value="19">Cayman Islands</option>
+                        <option value="110">Central African Republic</option>
+                        <option value="111">Chad</option>
+                        <option value="20">Chile</option>
+                        <option value="21">China</option>
+                        <option value="112">Christmas Island</option>
+                        <option value="113">Cocos (Keeling) Islands</option>
+                        <option value="22">Colombia</option>
+                        <option value="114">Comoros</option>
+                        <option value="115">Congo</option>
+                        <option value="116">Congo (Democratic Republic of the)</option>
+                        <option value="117">Cook Islands</option>
+                        <option value="23">Costa Rica</option>
+                        <option value="118">Cote D&#x27;Ivoire</option>
+                        <option value="24">Croatia</option>
+                        <option value="25">Cuba</option>
+                        <option value="26">Cyprus</option>
+                        <option value="27">Czech Republic</option>
+                        <option value="28">Denmark</option>
+                        <option value="119">Djibouti</option>
+                        <option value="120">Dominica</option>
+                        <option value="29">Dominican Republic</option>
+                        <option value="30">East Timor</option>
+                        <option value="31">Ecuador</option>
+                        <option value="32">Egypt</option>
+                        <option value="121">El Salvador</option>
+                        <option value="122">Equatorial Guinea</option>
+                        <option value="123">Eritrea</option>
+                        <option value="124">Estonia</option>
+                        <option value="125">Ethiopia</option>
+                        <option value="126">Falkland Islands (Malvinas)</option>
+                        <option value="127">Faroe Islands</option>
+                        <option value="128">Fiji</option>
+                        <option value="33">Finland</option>
+                        <option value="34">France</option>
+                        <option value="129">French Guiana</option>
+                        <option value="130">French Polynesia</option>
+                        <option value="131">French Southern Territories</option>
+                        <option value="132">Gabon</option>
+                        <option value="133">Gambia</option>
+                        <option value="35">Georgia</option>
+                        <option value="36">Germany</option>
+                        <option value="134">Ghana</option>
+                        <option value="37">Gibraltar</option>
+                        <option value="38">Greece</option>
+                        <option value="135">Greenland</option>
+                        <option value="136">Grenada</option>
+                        <option value="137">Guadeloupe</option>
+                        <option value="138">Guam</option>
+                        <option value="39">Guatemala</option>
+                        <option value="139">Guinea</option>
+                        <option value="140">Guinea-bissau</option>
+                        <option value="141">Guyana</option>
+                        <option value="142">Haiti</option>
+                        <option value="143">Heard and Mc Donald Islands</option>
+                        <option value="144">Honduras</option>
+                        <option value="40">Hong Kong</option>
+                        <option value="41">Hungary</option>
+                        <option value="145">Iceland</option>
+                        <option value="42">India</option>
+                        <option value="43">Indonesia</option>
+                        <option value="146">Iran (Islamic Republic of)</option>
+                        <option value="147">Iraq</option>
+                        <option value="44">Ireland</option>
+                        <option value="45">Israel</option>
+                        <option value="46">Italy</option>
+                        <option value="47">Jamaica</option>
+                        <option value="48">Japan</option>
+                        <option value="49">Jordan</option>
+                        <option value="50">Kazakhstan</option>
+                        <option value="148">Kenya</option>
+                        <option value="149">Kiribati</option>
+                        <option value="150">Korea</option>
+                        <option value="51">Korea, Democratic People&#x27;s Republic of</option>
+                        <option value="52">Kuwait</option>
+                        <option value="151">Kyrgyzstan</option>
+                        <option value="152">Lao People&#x27;s Democratic Republic</option>
+                        <option value="153">Latvia</option>
+                        <option value="154">Lebanon</option>
+                        <option value="155">Lesotho</option>
+                        <option value="156">Liberia</option>
+                        <option value="157">Libyan Arab Jamahiriya</option>
+                        <option value="158">Liechtenstein</option>
+                        <option value="159">Lithuania</option>
+                        <option value="160">Luxembourg</option>
+                        <option value="161">Macau</option>
+                        <option value="162">Macedonia</option>
+                        <option value="163">Madagascar</option>
+                        <option value="164">Malawi</option>
+                        <option value="53">Malaysia</option>
+                        <option value="165">Maldives</option>
+                        <option value="166">Mali</option>
+                        <option value="167">Malta</option>
+                        <option value="168">Marshall Islands</option>
+                        <option value="169">Martinique</option>
+                        <option value="170">Mauritania</option>
+                        <option value="171">Mauritius</option>
+                        <option value="172">Mayotte</option>
+                        <option value="54">Mexico</option>
+                        <option value="173">Micronesia</option>
+                        <option value="174">Moldova</option>
+                        <option value="175">Monaco</option>
+                        <option value="176">Mongolia</option>
+                        <option value="177">Montenegro</option>
+                        <option value="178">Montserrat</option>
+                        <option value="179">Morocco</option>
+                        <option value="180">Mozambique</option>
+                        <option value="181">Myanmar</option>
+                        <option value="182">Namibia</option>
+                        <option value="183">Nauru</option>
+                        <option value="184">Nepal</option>
+                        <option value="55">Netherlands</option>
+                        <option value="185">Netherlands Antilles</option>
+                        <option value="186">New Caledonia</option>
+                        <option value="56">New Zealand</option>
+                        <option value="187">Nicaragua</option>
+                        <option value="188">Niger</option>
+                        <option value="189">Nigeria</option>
+                        <option value="190">Niue</option>
+                        <option value="191">Norfolk Island</option>
+                        <option value="192">Northern Mariana Islands</option>
+                        <option value="57">Norway</option>
+                        <option value="193">Oman</option>
+                        <option value="58">Pakistan</option>
+                        <option value="194">Palau</option>
+                        <option value="59">Palestine</option>
+                        <option value="195">Panama</option>
+                        <option value="196">Papua New Guinea</option>
+                        <option value="60">Paraguay</option>
+                        <option value="61">Peru</option>
+                        <option value="62">Philippines</option>
+                        <option value="197">Pitcairn</option>
+                        <option value="63">Poland</option>
+                        <option value="64">Portugal</option>
+                        <option value="65">Puerto Rico</option>
+                        <option value="66">Qatar</option>
+                        <option value="198">Reunion</option>
+                        <option value="67">Romania</option>
+                        <option value="68">Russian Federation</option>
+                        <option value="199">Rwanda</option>
+                        <option value="200">Saint Kitts and Nevis</option>
+                        <option value="201">Saint Lucia</option>
+                        <option value="202">Saint Vincent and the Grenadines</option>
+                        <option value="203">Samoa</option>
+                        <option value="204">San Marino</option>
+                        <option value="205">Sao Tome and Principe</option>
+                        <option value="69">Saudi Arabia</option>
+                        <option value="206">Senegal</option>
+                        <option value="87">Serbia</option>
+                        <option value="207">Seychelles</option>
+                        <option value="208">Sierra Leone</option>
+                        <option value="70">Singapore</option>
+                        <option value="71">Slovakia (Slovak Republic)</option>
+                        <option value="72">Slovenia</option>
+                        <option value="209">Solomon Islands</option>
+                        <option value="210">Somalia</option>
+                        <option value="73">South Africa</option>
+                        <option value="211">South Georgia &amp; South Sandwich Islands</option>
+                        <option value="212">South Sudan</option>
+                        <option value="74">Spain</option>
+                        <option value="213">Sri Lanka</option>
+                        <option value="214">St. Helena</option>
+                        <option value="215">St. Pierre and Miquelon</option>
+                        <option value="216">Sudan</option>
+                        <option value="217">Suriname</option>
+                        <option value="218">Svalbard and Jan Mayen Islands</option>
+                        <option value="219">Swaziland</option>
+                        <option value="75">Sweden</option>
+                        <option value="76">Switzerland</option>
+                        <option value="220">Syrian Arab Republic</option>
+                        <option value="77">Taiwan</option>
+                        <option value="221">Tajikistan</option>
+                        <option value="222">Tanzania</option>
+                        <option value="78">Thailand</option>
+                        <option value="223">Togo</option>
+                        <option value="224">Tokelau</option>
+                        <option value="225">Tonga</option>
+                        <option value="226">Trinidad and Tobago</option>
+                        <option value="227">Tunisia</option>
+                        <option value="79">Turkey</option>
+                        <option value="228">Turkmenistan</option>
+                        <option value="229">Turks and Caicos Islands</option>
+                        <option value="230">Tuvalu</option>
+                        <option value="231">Uganda</option>
+                        <option value="80">Ukraine</option>
+                        <option value="81">United Arab Emirates</option>
+                        <option value="82">United Kingdom</option>
+                        <option value="83">United States minor outlying islands</option>
+                        <option value="84">Uruguay</option>
+                        <option value="85">Uzbekistan</option>
+                        <option value="232">Vanuatu</option>
+                        <option value="233">Vatican City State (Holy See)</option>
+                        <option value="86">Venezuela</option>
+                        <option value="234">Viet Nam</option>
+                        <option value="235">Virgin Islands (British)</option>
+                        <option value="236">Virgin Islands (U.S.)</option>
+                        <option value="237">Wallis and Futuna Islands</option>
+                        <option value="238">Western Sahara</option>
+                        <option value="239">Yemen</option>
+                        <option value="240">Zambia</option>
+                        <option value="241">Zimbabwe</option>
+                      </select>
+                      </div>
+                  </div>
+
+                   <div class="form-group ">
+                      <div title="Search by a specific vendor." data-toggle="tooltip" class="ico-help"> <label>Payment Method</label> <i class="fas fa-question-circle"></i></div>
+                      <div class="col-md-0">
+                      <select class="form-control" data-val="true" data-val-required="The Vendor field is required." id="SearchVendorId" name="SearchVendorId"><option selected="selected" value="0">All</option>
+                          <option value="1">All</option>
+                          <option value="2">Paypal Commerce</option>
+                          <option value="2">Check / Money order</option>
+                          <option value="2">Cyber source</option>
+                          <option value="2">Credit Card</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <div title="Search in order notes" data-toggle="tooltip" class="ico-help"> <label>Order Notes</label> <i class="fas fa-question-circle"></i></div>
+                      <input type="text" class="form-control" placeholder="Enter ...">
+                  </div>
+
+                  <div class="form-group d-flex">
+                      <div title="Go directly to order" data-toggle="tooltip" class="ico-help"> <label>Go directly to order #</label> <i class="fas fa-question-circle"></i></div>
+                      <input type="text" class="form-control" placeholder="Enter ...">
+                      <button type="button" class="btn btn-sm btn-primary">Go</button>
+                  </div>
+
+
+              </div>
+          </div>
+          <!-- /.row -->
+          <div class="row">
+              <div class="text-center col-12">
+                  <button type="button" id="search-products" class="btn btn-primary btn-search">
+                  <i class="fas fa-search"></i>
+                  Search
+                  </button>
+              </div>
+          </div>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- End Product Search -->
+
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+              <i class="fas fa-search"></i>
+            </button>
+            <h3 class="card-title">Products</h3>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+              <i class="fas fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+
+          <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th> <input type="checkbox" name="" value=""> </th>
+                  <th>Order</th>
+                  <th>Order Status</th>
+                  <th>Payment status</th>
+                  <th>Shipping status</th>
+                  <th>Customer</th>
+                  <th>Store</th>
+                  <th>Created on</th>
+                  <th>Order total</th>
+                  <th>View</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" name="" value=""></td>
+                        <td>5</td>
+                        <td> <span class="bg-green rounded p-1 text-bold">Complete</span> </td>
+                        <td>Paid</td>
+                        <td>Delivered</td>
+                        <td> <a href="">aslanasilon1@gmail.com</a> </td>
+                        <td> Lumina </td>
+                        <td>03/13/2024 4:20:10 AM</td>
+                        <td>$43.50</td>
+                        <td> <button type="button"> <i class="fa fa-eye"></i> </button> </td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" name="" value=""></td>
+                        <td>5</td>
+                        <td> <span class="bg-cyan rounded p-1 text-bold">Processing</span> </td>
+                        <td>Paid</td>
+                        <td>Shipped</td>
+                        <td> <a href="">aslanasilon2@gmail.com</a> </td>
+                        <td> Flexflow </td>
+                        <td>03/13/2024 4:20:10 AM</td>
+                        <td>$43.50</td>
+                        <td> <button type="button"> <i class="fa fa-eye"></i> </button> </td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" name="" value=""></td>
+                        <td>5</td>
+                        <td> <span class="bg-yellow rounded p-1 text-bold">Pending</span> </td>
+                        <td>Pending</td>
+                        <td>Shipped not required</td>
+                        <td> <a href="">aslanasilon3@gmail.com</a> </td>
+                        <td> Flexflow </td>
+                        <td>03/13/2024 4:20:10 AM</td>
+                        <td>$43.50</td>
+                        <td> <button type="button"> <i class="fa fa-eye"></i> </button> </td>
+                    </tr>
+                
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th> <input type="checkbox" name="" value=""> </th>
+                  <th>Order</th>
+                  <th>Order Status</th>
+                  <th>Payment status</th>
+                  <th>Shipping status</th>
+                  <th>Customer</th>
+                  <th>Store</th>
+                  <th>Created on</th>
+                  <th>Order total</th>
+                  <th>View</th>
+                </tr>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+          Footer
+        </div>
+        <!-- /.card-footer-->
+      </div>
+      <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <strong>AslanAsilon</strong>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+
+
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+
+
+
+
+</body>
+</html>
